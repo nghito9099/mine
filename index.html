@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="welcome" class="welcome">
+    <div class="welcome-card">
+      <div class="welcome-bow">🎀</div>
+      <p class="script">welcome, darling ♡</p>
+      <h2>Welcome to<br><span>Nghi's little world</span></h2>
+      <p>Một góc nhỏ màu hồng dành riêng cho những điều mình yêu thích.</p>
+      <button id="enter" class="button primary">enter ♡</button>
+    </div>
+  </div>
+
   <div class="ribbon ribbon-top">🎀</div>
   <div class="sparkles">✦　♡　✧　୨୧　✧　♡　✦</div>
 
@@ -20,6 +30,8 @@
     <nav>
       <a href="#about">about ♡</a>
       <a href="#interests">my world</a>
+      <a href="#diary">diary</a>
+      <a href="#gallery">memories</a>
       <a href="#contact">say hi!</a>
     </nav>
   </header>
@@ -72,24 +84,42 @@
         <p class="script">things I love...</p>
         <h2>Những điều mình thích 🎀</h2>
         <div class="cards">
-          <article class="card card-left">
-            <div class="sticker-mini">♡</div>
-            <span>01 · curious girl</span>
-            <h3>Học hỏi</h3>
-            <p>Luôn tò mò và muốn hiểu thêm về thế giới xung quanh.</p>
+          <article class="card card-left"><div class="sticker-mini">♡</div><span>01 · curious girl</span><h3>Học hỏi</h3><p>Luôn tò mò và muốn hiểu thêm về thế giới xung quanh.</p></article>
+          <article class="card card-center"><div class="sticker-mini">🌷</div><span>02 · book lover</span><h3>Văn học</h3><p>Thích những câu chuyện có chiều sâu và những góc nhìn khác nhau về con người.</p></article>
+          <article class="card card-right"><div class="sticker-mini">✧</div><span>03 · little creator</span><h3>Sáng tạo</h3><p>Biến những ý tưởng nhỏ thành những thứ mang dấu ấn của riêng mình.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="diary" class="section diary-section">
+      <div class="section-label">03 / DEAR DIARY</div>
+      <div class="section-content">
+        <p class="script">little notes from me...</p>
+        <h2>Nhật ký nhỏ 💌</h2>
+        <div class="diary-grid">
+          <article class="diary-note">
+            <span>08.10.2026</span>
+            <h3>today's little thought ♡</h3>
+            <p>Chậm một chút cũng không sao. Mỗi ngày mình vẫn đang lớn lên theo cách của riêng mình.</p>
           </article>
-          <article class="card card-center">
-            <div class="sticker-mini">🌷</div>
-            <span>02 · book lover</span>
-            <h3>Văn học</h3>
-            <p>Thích những câu chuyện có chiều sâu và những góc nhìn khác nhau về con người.</p>
+          <article class="diary-note pink-note">
+            <span>♡ a reminder</span>
+            <h3>be gentle with yourself</h3>
+            <p>Không cần phải hoàn hảo mới xứng đáng được yêu thương và tự hào về chính mình.</p>
           </article>
-          <article class="card card-right">
-            <div class="sticker-mini">✧</div>
-            <span>03 · little creator</span>
-            <h3>Sáng tạo</h3>
-            <p>Biến những ý tưởng nhỏ thành những thứ mang dấu ấn của riêng mình.</p>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-label">04 / MEMORIES</div>
+      <div class="section-content">
+        <p class="script">tiny pieces of my world...</p>
+        <h2>Những mảnh nhỏ ♡</h2>
+        <div class="polaroids">
+          <div class="polaroid p1"><div class="photo photo-one">🌷</div><span>little flowers</span></div>
+          <div class="polaroid p2"><div class="photo photo-two">🎀</div><span>pink things I love</span></div>
+          <div class="polaroid p3"><div class="photo photo-three">📖</div><span>quiet moments</span></div>
         </div>
       </div>
     </section>
@@ -110,7 +140,6 @@
     <span>made with ♡ by Tô Nghi</span>
     <span>© <span id="year"></span> · twnqhhi</span>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
