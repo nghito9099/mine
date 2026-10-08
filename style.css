@@ -1,10 +1,12 @@
 :root {
-  --bg: #f7f5f0;
-  --text: #1d1d1b;
-  --muted: #77736b;
-  --line: #dedbd3;
-  --accent: #8d6e63;
-  --card: #fffdf9;
+  --bg: #fff7fb;
+  --text: #6f4058;
+  --muted: #9b7185;
+  --line: #f1cddd;
+  --accent: #e88eb5;
+  --accent-dark: #c85f8d;
+  --card: #fffafd;
+  --pink-soft: #fce2ee;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,6 +18,23 @@ body {
   color: var(--text);
   font-family: "DM Sans", sans-serif;
   line-height: 1.7;
+  background-image: radial-gradient(#f5c9dc 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+body::before {
+  content: "♡ ୨୧ ♡ ୨୧ ♡";
+  display: block;
+  position: fixed;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #e9a8c4;
+  font-size: .8rem;
+  letter-spacing: 14px;
+  pointer-events: none;
+  z-index: 20;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -30,24 +49,32 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo {
+  font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.03em;
+  font-size: 1.3rem;
+  letter-spacing: .02em;
 }
 
-.logo span, h1 span { color: var(--accent); }
+.logo::before { content: "🎀 "; font-size: .9rem; }
+.logo span, h1 span { color: var(--accent-dark); }
 
-nav { display: flex; gap: 34px; }
+nav { display: flex; gap: 28px; }
 
 nav a {
   color: var(--muted);
   font-size: .9rem;
-  transition: color .2s;
+  transition: color .2s, transform .2s;
 }
 
-nav a:hover { color: var(--text); }
+nav a:hover { color: var(--accent-dark); transform: translateY(-1px); }
 
-.menu { display: none; border: 0; background: none; font-size: 1.4rem; }
+.menu {
+  display: none;
+  border: 0;
+  background: none;
+  color: var(--accent-dark);
+  font-size: 1.4rem;
+}
 
 .hero {
   width: min(1120px, calc(100% - 40px));
@@ -61,7 +88,7 @@ nav a:hover { color: var(--text); }
 }
 
 .eyebrow {
-  color: var(--accent);
+  color: var(--accent-dark);
   font-size: .75rem;
   font-weight: 700;
   letter-spacing: .2em;
@@ -70,6 +97,7 @@ nav a:hover { color: var(--text); }
 
 h1 {
   font-family: "Playfair Display", serif;
+  color: #713f58;
   font-size: clamp(4rem, 10vw, 8rem);
   line-height: .95;
   letter-spacing: -.06em;
@@ -90,30 +118,63 @@ h1 {
   border-radius: 999px;
   font-size: .9rem;
   font-weight: 600;
-  transition: transform .2s, background .2s;
+  transition: transform .2s, box-shadow .2s, background .2s;
 }
 
-.button:hover { transform: translateY(-2px); }
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(200,95,141,.18);
+}
 
-.primary { background: var(--text); color: white; }
-.secondary { border: 1px solid var(--line); }
+.primary {
+  background: linear-gradient(135deg, #ed9fc0, #d979a5);
+  color: white;
+  border: 1px solid #df89ae;
+}
+
+.secondary {
+  background: rgba(255,255,255,.75);
+  border: 1px solid var(--line);
+  color: var(--accent-dark);
+}
 
 .hero-card {
   aspect-ratio: 4 / 5;
   max-width: 350px;
   margin-left: auto;
-  border-radius: 180px 180px 24px 24px;
-  background: #e8e0d6;
+  border: 2px solid #f1bfd5;
+  border-radius: 180px 180px 35px 35px;
+  background: linear-gradient(160deg, #ffeaf3, #f9cedf);
   position: relative;
   display: flex;
   align-items: flex-end;
   padding: 34px;
   overflow: hidden;
+  box-shadow: 12px 18px 0 #f5d6e3;
+}
+
+.hero-card::before {
+  content: "୨୧";
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  color: #d979a5;
+  font-size: 2rem;
+}
+
+.hero-card::after {
+  content: "♡";
+  position: absolute;
+  top: 105px;
+  left: 28px;
+  color: #e88eb5;
+  font-size: 1.5rem;
 }
 
 .hero-card p {
   position: relative;
   z-index: 2;
+  color: #81455f;
   font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   line-height: 1.35;
@@ -123,36 +184,44 @@ h1 {
   width: 230px;
   height: 230px;
   border-radius: 50%;
-  background: #d1b9a9;
+  background: radial-gradient(circle at 35% 30%, #fff7fb, #f1aac8 70%);
   position: absolute;
   top: 55px;
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: 0 8px 30px rgba(213,110,157,.18);
 }
 
 .section {
   width: min(1120px, calc(100% - 40px));
   margin: auto;
   padding: 120px 0;
-  border-top: 1px solid var(--line);
+  border-top: 1px dashed var(--line);
   display: grid;
   grid-template-columns: .35fr 1fr;
   gap: 70px;
 }
 
 .section-label {
-  color: var(--accent);
+  color: var(--accent-dark);
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: .15em;
 }
 
 .section-content h2, .contact h2 {
+  color: #713f58;
   font-family: "Playfair Display", serif;
   font-size: clamp(2.2rem, 5vw, 4rem);
   line-height: 1.05;
   letter-spacing: -.04em;
   margin-bottom: 28px;
+}
+
+.section-content h2::after {
+  content: " ୨୧";
+  color: var(--accent);
+  font-size: .55em;
 }
 
 .section-content > p {
@@ -169,21 +238,30 @@ h1 {
 }
 
 .card {
-  background: var(--card);
+  position: relative;
+  background: rgba(255,250,253,.9);
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 28px;
   min-height: 220px;
   transition: transform .2s, box-shadow .2s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(29,29,27,.07);
+.card::after {
+  content: "♡";
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  color: #edb0ca;
 }
 
-.card span { color: var(--accent); font-size: .75rem; }
-.card h3 { margin: 35px 0 8px; font-size: 1.1rem; }
+.card:hover {
+  transform: translateY(-6px) rotate(-.5deg);
+  box-shadow: 0 18px 40px rgba(180,89,127,.12);
+}
+
+.card span { color: var(--accent-dark); font-size: .75rem; }
+.card h3 { margin: 35px 0 8px; font-family: "Playfair Display", serif; color: #81455f; font-size: 1.2rem; }
 .card p { color: var(--muted); font-size: .9rem; }
 
 .contact {
@@ -194,13 +272,14 @@ h1 {
 }
 
 .contact h2 { max-width: 700px; margin: 0 auto 18px; }
+.contact h2::after { content: " 🎀"; font-size: .45em; }
 .contact > p:not(.eyebrow) { color: var(--muted); margin-bottom: 30px; }
 
 footer {
   width: min(1120px, calc(100% - 40px));
   margin: auto;
   padding: 25px 0 35px;
-  border-top: 1px solid var(--line);
+  border-top: 1px dashed var(--line);
   display: flex;
   justify-content: space-between;
   color: var(--muted);
