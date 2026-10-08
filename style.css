@@ -484,3 +484,103 @@ footer {
   .contact { margin: 70px auto; }
   footer { flex-direction: column; gap: 8px; text-align: center; }
 }
+/* ✿ extra coquette details ✿ */
+.welcome {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; place-items: center;
+  background: rgba(255,235,243,.96);
+  backdrop-filter: blur(8px);
+  transition: opacity .6s, visibility .6s;
+}
+.welcome.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.welcome-card {
+  width: min(430px, calc(100% - 36px));
+  padding: 55px 38px 45px;
+  text-align: center;
+  background: #fffaf7;
+  border: 1px solid #edc5d4;
+  box-shadow: 10px 12px 0 #f2d5e1, 0 25px 60px rgba(143,76,104,.15);
+  transform: rotate(-1deg);
+}
+.welcome-bow { font-size: 3.5rem; margin-bottom: 5px; }
+.welcome-card .script { margin-bottom: 8px; }
+.welcome-card h2 {
+  color: #8f4c68;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.welcome-card h2 span {
+  color: #df7ea5;
+  font-family: "Parisienne", cursive;
+  font-size: 1.25em;
+}
+.welcome-card > p:not(.script) { color: #a8758c; font-size: .88rem; margin-bottom: 25px; }
+
+.diary-section { background: #fffafc; border: 1px dashed #edc5d4; }
+.diary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 38px; }
+.diary-note {
+  position: relative; padding: 28px;
+  background: #fffdf8; border: 1px solid #efd5df;
+  box-shadow: 4px 7px 0 #f5e1e8; transform: rotate(-1deg);
+}
+.diary-note::before {
+  content: "♡";
+  position: absolute; top: 12px; right: 18px; color: #e69ab7;
+}
+.diary-note span { color: #d07b9d; font-size: .68rem; letter-spacing: .08em; }
+.diary-note h3 { color: #8f4c68; font-family: "Playfair Display", serif; margin: 18px 0 8px; }
+.diary-note p { color: #a8758c; font-size: .88rem; }
+.diary-note.pink-note { background: #ffeaf2; transform: rotate(1.5deg); }
+
+.gallery-section { padding-bottom: 90px; }
+.polaroids {
+  display: flex; justify-content: center; align-items: flex-start;
+  gap: 24px; margin-top: 42px; flex-wrap: wrap;
+}
+.polaroid {
+  width: 175px; padding: 10px 10px 18px;
+  background: white; box-shadow: 0 10px 22px rgba(143,76,104,.12);
+  text-align: center; transition: .25s;
+}
+.polaroid:hover { transform: translateY(-10px) rotate(0deg) !important; }
+.p1 { transform: rotate(-6deg); }
+.p2 { transform: translateY(12px) rotate(4deg); }
+.p3 { transform: rotate(-2deg); }
+.photo {
+  height: 150px; display: grid; place-items: center;
+  font-size: 3.2rem; margin-bottom: 12px;
+  background: #ffe4ed;
+}
+.photo-one { background: linear-gradient(135deg,#f9d8e4,#fff3f6); }
+.photo-two { background: linear-gradient(135deg,#ffd9e8,#f3aec9); }
+.photo-three { background: linear-gradient(135deg,#f7e9dd,#fffaf3); }
+.polaroid span { color: #9e6b80; font-family: "Parisienne", cursive; font-size: 1.15rem; }
+
+.click-heart {
+  position: fixed; z-index: 90; pointer-events: none;
+  color: #e783aa; font-size: 1.25rem;
+  animation: floatHeart .9s ease-out forwards;
+  transform: translate(-50%,-50%);
+}
+@keyframes floatHeart {
+  0% { opacity: 1; transform: translate(-50%,-50%) scale(.7); }
+  100% { opacity: 0; transform: translate(-50%,-120px) scale(1.5) rotate(15deg); }
+}
+body::after {
+  content: "";
+  position: fixed; pointer-events: none; z-index: 2;
+  left: var(--mouse-x); top: var(--mouse-y);
+  width: 120px; height: 120px;
+  transform: translate(-50%,-50%);
+  background: radial-gradient(circle, rgba(245,169,197,.12), transparent 70%);
+}
+
+@media (max-width: 760px) {
+  .diary-grid { grid-template-columns: 1fr; }
+  .polaroids { gap: 14px; }
+  .polaroid { width: 145px; }
+  .photo { height: 125px; }
+  .welcome-card { padding: 45px 25px 35px; }
+}
