@@ -6,7 +6,7 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { background: var(--page); color: var(--text); font-family: "DM Sans", sans-serif; line-height: 1.7; overflow-x: hidden; background-image: radial-gradient(#f1c7d8 1px, transparent 1px), linear-gradient(120deg,rgba(255,255,255,.45),transparent 65%); background-size: 28px 28px,100% 100%; transition: background .3s,color .3s; }
+body { background: var(--page); color: var(--text); font-family: "DM Sans", sans-serif; line-height: 1.7; overflow-x: hidden; background-image: radial-gradient(ellipse at 15% 15%,rgba(255,190,218,.62),transparent 42%), radial-gradient(ellipse at 85% 30%,rgba(255,220,235,.85),transparent 38%), radial-gradient(ellipse at 55% 85%,rgba(242,184,220,.48),transparent 45%), radial-gradient(#f1c7d8 1px, transparent 1px), linear-gradient(120deg,rgba(255,255,255,.45),transparent 65%); background-size: 150% 150%,150% 150%,150% 150%,28px 28px,100% 100%; background-position: 0% 0%,100% 0%,50% 100%,0 0,0 0; animation: dreamyBackground 22s ease-in-out infinite alternate; transition: background .3s,color .3s; }
 a { color: inherit; text-decoration: none; }
 button,input { font: inherit; }
 button,a,label { -webkit-tap-highlight-color: transparent; }
@@ -104,6 +104,7 @@ footer { width: min(1080px,calc(100% - 40px)); margin: auto; padding: 25px 0 38p
 .floating-decor { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; color: #e7a1bb; }.floating-decor span { position: absolute; opacity: .5; animation: floatUp 11s linear infinite; }.floating-decor span:nth-child(1) { left: 5%; bottom: -40px; font-size: 1.5rem; }.floating-decor span:nth-child(2) { left: 22%; bottom: -40px; animation-delay: -5s; }.floating-decor span:nth-child(3) { right: 16%; bottom: -50px; animation-delay: -8s; font-size: 1.7rem; }.floating-decor span:nth-child(4) { right: 6%; bottom: -50px; animation-delay: -2s; }.floating-decor span:nth-child(5) { left: 70%; bottom: -40px; animation-delay: -6s; }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease,transform .7s ease; }.reveal.is-visible { opacity: 1; transform: translateY(0); }
 .click-heart { position: fixed; z-index: 90; pointer-events: none; color: #e783aa; font-size: 1.25rem; animation: floatHeart .9s ease-out forwards; transform: translate(-50%,-50%); }
+@keyframes dreamyBackground { 0% { background-position: 0% 0%,100% 0%,50% 100%,0 0,0 0; } 50% { background-position: 35% 25%,65% 45%,20% 65%,0 0,0 0; } 100% { background-position: 100% 55%,0% 100%,85% 20%,0 0,0 0; } }
 @keyframes heartbeat { 0%,100% { transform: scale(1); } 12% { transform: scale(1.13); } 22% { transform: scale(1); } }
 @keyframes cardFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
 @keyframes twinkle { 0%,100% { opacity: .55; transform: scale(.9) rotate(0); } 50% { opacity: 1; transform: scale(1.2) rotate(12deg); } }
