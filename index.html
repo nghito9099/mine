@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website cá nhân của Tô Nghi.">
-  <title>Tô Nghi ♡ personal diary</title>
+  <meta name="theme-color" content="#fff0f6">
+  <meta name="description" content="Góc nhỏ màu hồng của Tô Nghi — vật lý, sách và trượt băng.">
+  <title>mine ♡ — Tô Nghi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&family=Parisienne&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="floating-decor" aria-hidden="true"><span>♡</span><span>✦</span><span>୨୧</span><span>♡</span><span>✧</span></div>
   <div id="welcome" class="welcome">
     <div class="welcome-card">
-      <div class="welcome-bow">🎀</div>
-      <p class="script">welcome, darling ♡</p>
-      <h2>Welcome to<br><span>Nghi's little world</span></h2>
-      <p>Một góc nhỏ màu hồng dành riêng cho những điều mình yêu thích.</p>
-      <button id="enter" class="button primary">enter ♡</button>
+      <div class="welcome-bow" aria-hidden="true">🎀</div>
+      <p class="script">welcome to my little world</p>
+      <h2>mine <span>♡</span></h2>
+      <p>Một góc nhỏ xinh xắn để cất giữ những điều mình yêu thích.</p>
+      <button id="enter" class="button primary" type="button">vào thôi ♡</button>
     </div>
   </div>
 
-  <div class="ribbon ribbon-top">🎀</div>
-  <div class="sparkles">✦　♡　✧　୨୧　✧　♡　✦</div>
-
   <header class="nav">
-    <a class="logo" href="#home">twnqhhi<span>♡</span></a>
-    <button class="menu" aria-label="Mở menu">☰</button>
-    <nav>
+    <a class="logo" href="#home" aria-label="mine, về đầu trang">mine<span>♡</span></a>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Chuyển giao diện sáng tối" title="Chuyển sáng / tối">☾</button>
+      <button class="menu" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+    </div>
+    <nav aria-label="Điều hướng chính">
       <a href="#about">about ♡</a>
       <a href="#interests">my world</a>
-      <a href="#diary">diary</a>
       <a href="#gallery">memories</a>
       <a href="#contact">say hi!</a>
     </nav>
@@ -38,108 +39,102 @@
 
   <main>
     <section id="home" class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">♡ welcome to my little world ♡</p>
-        <h1>Hi, I'm<br><span>Tô Nghi</span> 🎀</h1>
-        <p class="intro">Một góc nhỏ màu hồng trên internet — nơi mình lưu lại những điều mình thích, những điều đang học và những câu chuyện nhỏ của mình.</p>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">♡ a tiny corner of the internet ♡</p>
+        <h1>mine <span class="heart-title">♡</span></h1>
+        <p class="hero-name">hi, mình là <span>Tô Nghi</span> 🎀</p>
+        <p class="intro">Chào mừng bạn đến với chiếc nhật ký nhỏ của mình — nơi có những câu hỏi vật lý, những trang sách hay và những vòng trượt băng thật vui.</p>
         <div class="actions">
-          <a class="button primary" href="#about">♡ tìm hiểu mình</a>
-          <a class="button secondary" href="#contact">ghé qua nhé</a>
+          <a class="button primary" href="#about">khám phá một chút ♡</a>
+          <a class="button secondary" href="#gallery">xem memories ✧</a>
         </div>
+        <p class="tiny-note">made of little things & lots of love</p>
       </div>
 
-      <div class="hero-card">
-        <div class="lace"></div>
-        <div class="portrait">
-          <div class="portrait-bow">🎀</div>
-          <div class="portrait-heart">♡</div>
-          <div class="portrait-initial">N</div>
+      <div class="hero-card reveal">
+        <span class="tape tape-one" aria-hidden="true"></span><span class="tape tape-two" aria-hidden="true"></span>
+        <div class="portrait-wrap">
+          <div id="avatar-preview" class="portrait" role="img" aria-label="Ảnh đại diện mặc định với chữ N">
+            <span class="portrait-sparkle">✦</span><span class="portrait-initial">N</span><span class="portrait-heart">♡</span>
+          </div>
         </div>
-        <div class="card-note">
-          <span>dear diary,</span>
-          <p>keep learning,<br>keep becoming ♡</p>
-        </div>
-        <span class="tiny-star star-one">✦</span>
-        <span class="tiny-star star-two">♡</span>
+        <label class="upload-label" for="avatar-upload">＋ thêm ảnh đại diện</label>
+        <input id="avatar-upload" class="visually-hidden" type="file" accept="image/*">
+        <div class="card-note"><span>dear little diary,</span><p>stay curious,<br>stay soft ♡</p></div>
+        <span class="orbit orbit-one" aria-hidden="true">✧</span><span class="orbit orbit-two" aria-hidden="true">♡</span>
       </div>
     </section>
 
-    <div class="divider">୨୧ ───────── ♡ ───────── ୨୧</div>
+    <div class="divider" aria-hidden="true">୨୧ ─────── ♡ ─────── ୨୧</div>
 
-    <section id="about" class="section paper">
-      <div class="sticker">🎀<br><small>that's me</small></div>
+    <section id="about" class="section paper reveal">
       <div class="section-label">01 / ABOUT ME</div>
       <div class="section-content">
         <p class="script">a little introduction...</p>
         <h2>Một chút về mình ♡</h2>
-        <p>Mình là Tô Nghi, một học sinh đang trên hành trình khám phá bản thân, học hỏi những điều mới và tìm kiếm hướng đi phù hợp cho tương lai.</p>
-        <p>Website này giống như một cuốn nhật ký nhỏ trên internet — đơn giản, đáng yêu và có một chút dấu ấn riêng của mình.</p>
+        <p>Mình là <strong>Tô Nghi</strong>. Mình thích khám phá những điều khiến bản thân tò mò, từ cách thế giới vận hành cho đến những câu chuyện nằm giữa các trang sách.</p>
+        <p>Đây là góc nhỏ của mình để lưu lại sở thích, những kỷ niệm và các điều dễ thương trong cuộc sống. Cứ thong thả khám phá nhé!</p>
+        <div class="interest-tags"><span>♡ vật lý</span><span>♡ đọc sách</span><span>♡ trượt băng</span></div>
         <div class="signature">with love,<br><strong>Nghi ♡</strong></div>
       </div>
+      <span class="paper-sticker" aria-hidden="true">🎀</span>
     </section>
 
-    <section id="interests" class="section">
+    <section id="interests" class="section reveal">
       <div class="section-label">02 / MY LITTLE WORLD</div>
       <div class="section-content">
         <p class="script">things I love...</p>
         <h2>Những điều mình thích 🎀</h2>
         <div class="cards">
-          <article class="card card-left"><div class="sticker-mini">♡</div><span>01 · curious girl</span><h3>Học hỏi</h3><p>Luôn tò mò và muốn hiểu thêm về thế giới xung quanh.</p></article>
-          <article class="card card-center"><div class="sticker-mini">🌷</div><span>02 · book lover</span><h3>Văn học</h3><p>Thích những câu chuyện có chiều sâu và những góc nhìn khác nhau về con người.</p></article>
-          <article class="card card-right"><div class="sticker-mini">✧</div><span>03 · little creator</span><h3>Sáng tạo</h3><p>Biến những ý tưởng nhỏ thành những thứ mang dấu ấn của riêng mình.</p></article>
+          <article class="interest-card physics"><div class="card-icon">✦</div><span>01 · curious mind</span><h3>Vật lý</h3><p>Mình thích đặt câu hỏi, tìm hiểu quy luật và khám phá cách mọi thứ hoạt động.</p><span class="orbit-doodle" aria-hidden="true">◌</span></article>
+          <article class="interest-card books"><div class="card-icon">📖</div><span>02 · book lover</span><h3>Đọc sách</h3><p>Mỗi cuốn sách mở ra một thế giới mới và cho mình thêm nhiều góc nhìn.</p><span class="orbit-doodle" aria-hidden="true">♡</span></article>
+          <article class="interest-card skate"><div class="card-icon">⛸</div><span>03 · on the ice</span><h3>Trượt băng</h3><p>Một sở thích để vận động, tận hưởng âm nhạc và thử những điều mới.</p><span class="orbit-doodle" aria-hidden="true">✧</span></article>
         </div>
       </div>
     </section>
 
-    <section id="diary" class="section diary-section">
-      <div class="section-label">03 / DEAR DIARY</div>
-      <div class="section-content">
-        <p class="script">little notes from me...</p>
-        <h2>Nhật ký nhỏ 💌</h2>
-        <div class="diary-grid">
-          <article class="diary-note">
-            <span>08.10.2026</span>
-            <h3>today's little thought ♡</h3>
-            <p>Chậm một chút cũng không sao. Mỗi ngày mình vẫn đang lớn lên theo cách của riêng mình.</p>
-          </article>
-          <article class="diary-note pink-note">
-            <span>♡ a reminder</span>
-            <h3>be gentle with yourself</h3>
-            <p>Không cần phải hoàn hảo mới xứng đáng được yêu thương và tự hào về chính mình.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="section gallery-section">
-      <div class="section-label">04 / MEMORIES</div>
+    <section id="gallery" class="section gallery-section reveal">
+      <div class="section-label">03 / LITTLE MEMORIES</div>
       <div class="section-content">
         <p class="script">tiny pieces of my world...</p>
-        <h2>Những mảnh nhỏ ♡</h2>
-        <div class="polaroids">
-          <div class="polaroid p1"><div class="photo photo-one">🌷</div><span>little flowers</span></div>
-          <div class="polaroid p2"><div class="photo photo-two">🎀</div><span>pink things I love</span></div>
-          <div class="polaroid p3"><div class="photo photo-three">📖</div><span>quiet moments</span></div>
+        <h2>Thư viện ảnh ♡</h2>
+        <p class="gallery-hint">Thêm ảnh của bạn để biến góc này thành một cuốn scrapbook riêng. Ảnh được xem ngay trên trình duyệt hiện tại.</p>
+        <label class="button secondary upload-button" for="gallery-upload">＋ thêm ảnh vào thư viện</label>
+        <input id="gallery-upload" class="visually-hidden" type="file" accept="image/*" multiple>
+        <div id="gallery-grid" class="gallery-grid">
+          <article class="memory-card memory-one"><div class="memory-art flower-art" aria-hidden="true">🌷</div><span>little things</span></article>
+          <article class="memory-card memory-two"><div class="memory-art bow-art" aria-hidden="true">🎀</div><span>pink mood</span></article>
+          <article class="memory-card memory-three"><div class="memory-art book-art" aria-hidden="true">📚</div><span>quiet moments</span></article>
         </div>
+        <p class="local-note">Lưu ý: ảnh tải lên chỉ hiển thị ở trình duyệt này; muốn đăng ảnh công khai cho mọi người xem, hãy thêm ảnh vào repo và cập nhật website.</p>
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact reveal">
       <div class="contact-card">
-        <span class="bow">🎀</span>
+        <span class="bow" aria-hidden="true">🎀</span>
         <p class="eyebrow">♡ LET'S BE FRIENDS ♡</p>
-        <h2>Cảm ơn vì đã ghé qua!</h2>
-        <p>Nếu muốn kết nối, bạn có thể tìm mình trên GitHub ♡</p>
-        <a class="button primary" href="https://github.com/nghito9099" target="_blank" rel="noopener">ghé GitHub của mình ↗</a>
-        <div class="contact-decoration">♡ ୨୧ ✦ ୨୧ ♡</div>
+        <h2>Ghé chào mình nhé!</h2>
+        <p>Một lời chào nhỏ luôn được chào đón 💌</p>
+        <div class="social-links">
+          <a class="social-link" href="https://www.instagram.com/_gyae.reverie_/" target="_blank" rel="noopener noreferrer"><span>◎</span> Instagram <b>↗</b></a>
+          <a class="social-link" href="https://www.facebook.com/twnqhhi.09/" target="_blank" rel="noopener noreferrer"><span>f</span> Facebook <b>↗</b></a>
+          <a class="social-link" href="mailto:gianghitophuc2909@gmail.com"><span>✉</span> Gmail <b>↗</b></a>
+        </div>
+        <div class="contact-decoration" aria-hidden="true">♡ ୨୧ ✦ ୨୧ ♡</div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>made with ♡ by Tô Nghi</span>
-    <span>© <span id="year"></span> · twnqhhi</span>
-  </footer>
-  <script src="script.js"></script>
+  <section class="music-widget" aria-label="Nhạc nền tuỳ chọn">
+    <div class="music-copy"><span class="music-note" aria-hidden="true">♫</span><div><strong>little soundtrack</strong><small id="music-status">Chọn một file nhạc của bạn</small></div></div>
+    <label class="music-button" for="music-upload">chọn nhạc ♡</label>
+    <input id="music-upload" class="visually-hidden" type="file" accept="audio/*">
+    <button id="music-toggle" class="music-button play-button" type="button" disabled>▶ phát</button>
+    <audio id="background-music" loop></audio>
+  </section>
+
+  <footer><span>made with ♡ by Tô Nghi</span><span>© <span id="year"></span> · mine</span></footer>
+  <script src="./script.js"></script>
 </body>
 </html>
