@@ -6,7 +6,7 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { background: var(--page); color: var(--text); font-family: "DM Sans", sans-serif; line-height: 1.7; overflow-x: hidden; background-image: radial-gradient(ellipse at 15% 15%,rgba(255,190,218,.62),transparent 42%), radial-gradient(ellipse at 85% 30%,rgba(255,220,235,.85),transparent 38%), radial-gradient(ellipse at 55% 85%,rgba(242,184,220,.48),transparent 45%), radial-gradient(#f1c7d8 1px, transparent 1px), linear-gradient(120deg,rgba(255,255,255,.45),transparent 65%); background-size: 150% 150%,150% 150%,150% 150%,28px 28px,100% 100%; background-position: 0% 0%,100% 0%,50% 100%,0 0,0 0; animation: dreamyBackground 22s ease-in-out infinite alternate; transition: background .3s,color .3s; }
+body { background: var(--page); color: var(--text); font-family: "DM Sans", sans-serif; line-height: 1.7; overflow-x: hidden; background-image: radial-gradient(circle at 12% 18%,rgba(255,255,255,.92) 0 3px,transparent 4px), radial-gradient(circle at 82% 32%,rgba(255,255,255,.85) 0 3px,transparent 4px), radial-gradient(circle at 42% 76%,rgba(255,255,255,.8) 0 2px,transparent 3px), radial-gradient(ellipse at 12% 20%,#ffd2e4 0,transparent 34%), radial-gradient(ellipse at 88% 68%,#ffc5df 0,transparent 35%), linear-gradient(135deg,#fff0f7,#ffe0ef 48%,#fff5fa); background-size: 34px 34px,42px 42px,30px 30px,150% 150%,150% 150%,100% 100%; background-position: 0 0,10px 12px,4px 0,0% 0%,100% 100%,0 0; animation: cartoonPinkBg 18s ease-in-out infinite alternate; transition: background .3s,color .3s; }
 a { color: inherit; text-decoration: none; }
 button,input { font: inherit; }
 button,a,label { -webkit-tap-highlight-color: transparent; }
@@ -104,7 +104,7 @@ footer { width: min(1080px,calc(100% - 40px)); margin: auto; padding: 25px 0 38p
 .floating-decor { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; color: #e7a1bb; }.floating-decor span { position: absolute; opacity: .5; animation: floatUp 11s linear infinite; }.floating-decor span:nth-child(1) { left: 5%; bottom: -40px; font-size: 1.5rem; }.floating-decor span:nth-child(2) { left: 22%; bottom: -40px; animation-delay: -5s; }.floating-decor span:nth-child(3) { right: 16%; bottom: -50px; animation-delay: -8s; font-size: 1.7rem; }.floating-decor span:nth-child(4) { right: 6%; bottom: -50px; animation-delay: -2s; }.floating-decor span:nth-child(5) { left: 70%; bottom: -40px; animation-delay: -6s; }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease,transform .7s ease; }.reveal.is-visible { opacity: 1; transform: translateY(0); }
 .click-heart { position: fixed; z-index: 90; pointer-events: none; color: #e783aa; font-size: 1.25rem; animation: floatHeart .9s ease-out forwards; transform: translate(-50%,-50%); }
-@keyframes dreamyBackground { 0% { background-position: 0% 0%,100% 0%,50% 100%,0 0,0 0; } 50% { background-position: 35% 25%,65% 45%,20% 65%,0 0,0 0; } 100% { background-position: 100% 55%,0% 100%,85% 20%,0 0,0 0; } }
+@keyframes cartoonPinkBg { 0% { background-position: 0 0,10px 12px,4px 0,0% 0%,100% 100%,0 0; } 50% { background-position: 8px 5px,0 18px,12px 7px,45% 25%,60% 70%,0 0; } 100% { background-position: 0 0,10px 12px,4px 0,100% 70%,0% 20%,0 0; } }
 @keyframes heartbeat { 0%,100% { transform: scale(1); } 12% { transform: scale(1.13); } 22% { transform: scale(1); } }
 @keyframes cardFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
 @keyframes twinkle { 0%,100% { opacity: .55; transform: scale(.9) rotate(0); } 50% { opacity: 1; transform: scale(1.2) rotate(12deg); } }
@@ -113,7 +113,7 @@ footer { width: min(1080px,calc(100% - 40px)); margin: auto; padding: 25px 0 38p
 @keyframes floatUp { 0% { transform: translateY(0) rotate(0); opacity: 0; } 15% { opacity: .55; } 100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; } }
 @keyframes floatHeart { 0% { opacity: 1; transform: translate(-50%,-50%) scale(.7); } 100% { opacity: 0; transform: translate(-50%,-120px) scale(1.5) rotate(15deg); } }
 @keyframes popIn { from { opacity: 0; transform: translateY(12px) rotate(-2deg) scale(.97); } to { opacity: 1; transform: translateY(0) rotate(-1deg) scale(1); } }
-body.dark { color-scheme: dark; --pink: #f19bc0; --deep: #ffd4e5; --text: #f7e5ed; --muted: #d3aabd; --cream: #29202a; --blush: #332330; --line: #624054; --white: #302430; --shadow: rgba(0,0,0,.28); --page: #201923; --card: rgba(45,32,44,.92); background-image: radial-gradient(#593449 1px,transparent 1px),linear-gradient(120deg,rgba(255,255,255,.02),transparent 65%); }
+body.dark { color-scheme: dark; --pink: #f19bc0; --deep: #ffd4e5; --text: #f7e5ed; --muted: #d3aabd; --cream: #29202a; --blush: #332330; --line: #624054; --white: #302430; --shadow: rgba(0,0,0,.28); --page: #201923; --card: rgba(45,32,44,.92); background-image: radial-gradient(#593449 1px,transparent 1px),linear-gradient(120deg,rgba(255,255,255,.02),transparent 65%); background-size: 28px 28px,100% 100%; animation: none; }
 body.dark .paper,body.dark .interest-card,body.dark .memory-card,body.dark .hero-card,body.dark .welcome-card { background: var(--card); }
 body.dark .card-note,body.dark .contact-card { background: #382535; }
 body.dark .contact-card { border-color: var(--line); }
