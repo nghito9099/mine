@@ -113,7 +113,7 @@ footer { width: min(1080px,calc(100% - 40px)); margin: auto; padding: 25px 0 38p
 @keyframes floatUp { 0% { transform: translateY(0) rotate(0); opacity: 0; } 15% { opacity: .55; } 100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; } }
 @keyframes floatHeart { 0% { opacity: 1; transform: translate(-50%,-50%) scale(.7); } 100% { opacity: 0; transform: translate(-50%,-120px) scale(1.5) rotate(15deg); } }
 @keyframes popIn { from { opacity: 0; transform: translateY(12px) rotate(-2deg) scale(.97); } to { opacity: 1; transform: translateY(0) rotate(-1deg) scale(1); } }
-body.dark { color-scheme: dark; --pink: #f19bc0; --deep: #ffd4e5; --text: #f7e5ed; --muted: #d3aabd; --cream: #29202a; --blush: #332330; --line: #624054; --white: #302430; --shadow: rgba(0,0,0,.28); --page: #201923; --card: rgba(45,32,44,.92); background-image: radial-gradient(#593449 1px,transparent 1px),linear-gradient(120deg,rgba(255,255,255,.02),transparent 65%); background-size: 28px 28px,100% 100%; animation: none; background-attachment: fixed; }
+body.dark { color-scheme: dark; --pink: #f19bc0; --deep: #ffd4e5; --text: #f7e5ed; --muted: #d3aabd; --cream: #29202a; --blush: #332330; --line: #624054; --white: #302430; --shadow: rgba(0,0,0,.28); --page: #201923; --card: rgba(45,32,44,.92); background-image: url("./bg.webp"); background-size: cover; background-position: center top; background-repeat: no-repeat; background-attachment: fixed; animation: none; }
 body.dark .paper,body.dark .interest-card,body.dark .memory-card,body.dark .hero-card,body.dark .welcome-card { background: var(--card); }
 body.dark .card-note,body.dark .contact-card { background: #382535; }
 body.dark .contact-card { border-color: var(--line); }
